@@ -52,7 +52,7 @@ public class BluetoothRow {
 
     /**
      * If device is marked as LE device
-     * @return
+     * @return true if LE device
      */
     public boolean isLeDevice() {
         return mLeDevice;

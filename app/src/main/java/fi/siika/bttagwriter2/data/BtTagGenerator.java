@@ -52,8 +52,6 @@ public class BtTagGenerator {
             throw new IllegalArgumentException("Type missing");
         }
 
-        NdefRecord media = null;
-
         BtSecureSimplePairing.Data content = new BtSecureSimplePairing.Data();
         content.setName(info.name);
         content.setAddress(info.address);
@@ -92,7 +90,7 @@ public class BtTagGenerator {
             recordId = new byte[]{RECORD_ID_BYTE};
         }
 
-        media = new NdefRecord(NdefRecord.TNF_MIME_MEDIA, mime, recordId,
+        NdefRecord media = new NdefRecord(NdefRecord.TNF_MIME_MEDIA, mime, recordId,
                 BtSecureSimplePairing.generate(content, (short) (mediaSizeLimit - 4)));
 
         if (info.getType() == TagType.HANDOVER) {

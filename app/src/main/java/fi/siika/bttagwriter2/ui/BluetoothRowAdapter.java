@@ -9,9 +9,7 @@
 package fi.siika.bttagwriter2.ui;
 
 import android.app.Activity;
-import android.bluetooth.BluetoothClass;
 import android.bluetooth.BluetoothDevice;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +48,7 @@ public class BluetoothRowAdapter extends ArrayAdapter<Object> {
         View row = convertView;
         if (row == null) {
             LayoutInflater inflater = activity.getLayoutInflater();
-            row = inflater.inflate(R.layout.bt_device_layout, null);
+            row = inflater.inflate(R.layout.bt_device_layout, parent);
         }
 
         BluetoothRow rowData = list.get(position);

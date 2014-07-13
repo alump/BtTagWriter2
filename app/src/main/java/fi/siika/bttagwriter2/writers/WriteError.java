@@ -44,5 +44,5 @@ public enum WriteError {
     /**
      * General system error (software failure)
      */
-    SYSTEM_ERROR;
+    SYSTEM_ERROR
 }

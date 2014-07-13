@@ -20,5 +20,5 @@ public enum TagType {
     /**
      * Standard handover type tag (better compatibility)
      */
-    HANDOVER;
+    HANDOVER
 }

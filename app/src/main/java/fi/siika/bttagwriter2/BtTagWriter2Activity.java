@@ -12,7 +12,6 @@ import android.bluetooth.BluetoothDevice;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.text.Html;
@@ -69,7 +68,7 @@ public class BtTagWriter2Activity extends Activity implements
     }
 
     private void setCurrentPage(int page) {
-        int pageWas = getCurrentPage();
+        //int pageWas = getCurrentPage();
         if (showFlipChild(page)) {
             if (Pages.BT_SELECT.equal(page)) {
                 startBluetoothDiscovery();
