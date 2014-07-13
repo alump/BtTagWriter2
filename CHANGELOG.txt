@@ -1,0 +1,50 @@
+BT Tag Writer 2 Changelog
+
+*** #15 v1.9.1 [2014-07-13]
+ * Gradle project
+ * Android KitKat dependency 4.4+
+ * Replacing dark colors with bright colors
+ * Adding Bluetooth Low Energy support as requested (no clear use case for this yet)
+ * Not in Play Store yet
+
+*** #10 v1.0 [2013-08-09]
+ * Removed all pairing functionality from code, as it can not be used in 4.1+ versions.
+ * Compatibility mode added. This will write proper tags that also should work with other than
+   Android devices. Tested with Windows Phone 8.
+ * Many fixes to data written to tags (Android accepts quite broken data).
+ * Some highres icons added
+ * Code cleaned a little bit, I hated my 2yo Java coding so much :)
+ * Fixes #1
+
+*** #7 v0.6.1 [2012-07-16]
+  * Ok, stupid me, looks like old tags were already understood by Android 4.1+
+    So hiding Jelly Bean option for now. Same tags should work with both.
+    This option can be re-enabled later if it will offer better device support
+    (WinMo, iOS...?).
+
+*** #6 v0.6 [2012-07-16]
+  * Moved back to proper Android design with usage of back button
+  * Added support for writing tags that Jelly Bean understands without need of
+    having this software installed.
+
+*** #5 v0.5 [2012-06-26]
+  * Bug fixes
+  * Removed forced Bluetooth filtering and replaced it with better UI and
+    optional filtering.
+
+*** #4 v0.4 [2012-03-30]
+  * Now for Android 4.0.3+
+  * Not only Mifare Ultralights (support via Ndef and NdefFormatable)
+  * Headsets hidden as connecting to those is failing
+  * 1 crash fix
+  * UI changes ("ICS styled")
+
+*** #3 v0.3 [2011-12-20]
+  * Mistake in 0.2 release fixed. Now paired devices are also shown if
+    Bluetooth is enabled by application.
+
+*** #2 v0.2 [2011-12-20]
+  * Also use list of paired devices to populate discovery list in wizard
+
+*** #1 v0.1 [2011-12-20]
+  * Initial demo release to Android Market
