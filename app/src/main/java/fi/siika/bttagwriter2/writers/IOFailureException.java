@@ -17,6 +17,10 @@ import fi.siika.bttagwriter2.writers.WriteError;
  */
 public class IOFailureException extends WriteException {
 
+    public IOFailureException(IOException source, String msg) {
+        this(WriteError.SYSTEM_ERROR, source, msg);
+    }
+
     public IOFailureException(WriteError errorCode, IOException source, String msg) {
         super(errorCode, source, msg);
     }

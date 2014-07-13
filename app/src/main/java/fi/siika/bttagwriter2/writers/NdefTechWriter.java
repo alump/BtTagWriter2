@@ -64,7 +64,7 @@ public class NdefTechWriter extends TagTechWriter {
                 form.close();
             }
         } catch (IOException e) {
-            throw new IOFailureException("Failed to close Ndef(Formatable)", e);
+            throw new IOFailureException(e, "Failed to close Ndef(Formatable)");
         }
     }
 

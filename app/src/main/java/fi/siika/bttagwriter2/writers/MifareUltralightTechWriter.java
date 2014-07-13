@@ -53,7 +53,7 @@ public class MifareUltralightTechWriter extends TagTechWriter {
         try {
             mul.connect();
         } catch (IOException e) {
-            throw new IOFailureException("Failed to connect to MUL", e);
+            throw new IOFailureException(e, "Failed to connect to MUL");
         }
 
         int ndefSizeLimitPages = 36;
@@ -106,7 +106,7 @@ public class MifareUltralightTechWriter extends TagTechWriter {
         try {
             writeData(mul, intLock, cc, payload);
         } catch (IOException e) {
-            throw new IOFailureException("Failed to write to MUL", e);
+            throw new IOFailureException(e, "Failed to write to MUL");
         }
 
         //Finally activate locking if needed
@@ -123,7 +123,7 @@ public class MifareUltralightTechWriter extends TagTechWriter {
         try {
             mul.close();
         } catch (IOException e) {
-            throw new IOFailureException("Failed to close MUL", e);
+            throw new IOFailureException(e, "Failed to close MUL");
         }
 
         Log.d(TAG, "Mifare Ultralight written");

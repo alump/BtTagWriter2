@@ -137,17 +137,17 @@ public class BtTagWriter2Activity extends Activity implements
         if (current == index) {
             return false;
         } else if (Pages.ABOUT.equal(current)) {
-            flip.setInAnimation(this, R.animator.fade_in_anim);
-            flip.setOutAnimation(this, R.animator.out_jump_anim);
+            flip.setInAnimation(this, R.anim.fade_in_anim);
+            flip.setOutAnimation(this, R.anim.out_jump_anim);
         } else if (Pages.ABOUT.equal(index)) {
-            flip.setInAnimation(this, R.animator.in_jump_anim);
-            flip.setOutAnimation(this, R.animator.fade_out_anim);
+            flip.setInAnimation(this, R.anim.in_jump_anim);
+            flip.setOutAnimation(this, R.anim.fade_out_anim);
         } else if (current < index) {
-            flip.setInAnimation(this, R.animator.in_left_anim);
-            flip.setOutAnimation(this, R.animator.out_right_anim);
+            flip.setInAnimation(this, R.anim.in_left_anim);
+            flip.setOutAnimation(this, R.anim.out_right_anim);
         } else {
-            flip.setInAnimation(this, R.animator.in_right_anim);
-            flip.setOutAnimation(this, R.animator.out_left_anim);
+            flip.setInAnimation(this, R.anim.in_right_anim);
+            flip.setOutAnimation(this, R.anim.out_left_anim);
         }
 
         flipChildHidden(current);
